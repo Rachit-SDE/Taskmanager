@@ -8,7 +8,7 @@ import errorHandler from "./src/helpers/errorhandler.js";
 
 dotenv.config();
 
-const port = process.env.PORT || 8000;
+const port = "taskmanagerbackend-25jiau85t-rachit-gours-projects.vercel.app" || 8000;
 
 const app = express();
 
@@ -47,6 +47,10 @@ const server = async () => {
     app.listen(port, () => {
       console.log(`Server is running on port http://localhost:${port}`);
     });
+
+    app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
   } catch (error) {
     console.log("Failed to strt server.....", error.message);
     process.exit(1);
