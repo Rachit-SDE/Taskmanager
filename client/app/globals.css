@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 222 51% 13%; /* #0a192f */
+    --foreground: 220 16% 96%; /* #e6ecfa */
+    --card: 222 36% 17%; /* #112240 */
+    --card-foreground: 220 16% 96%;
+    --popover: 222 36% 17%;
+    --popover-foreground: 220 16% 96%;
+    --primary: 220 100% 66%; /* #3aafae or similar */
+    --primary-foreground: 222 51% 13%;
+    --secondary: 222 36% 17%;
+    --secondary-foreground: 220 16% 96%;
+    --muted: 222 36% 22%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 222 36% 22%;
+    --accent-foreground: 220 16% 96%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 36% 22%;
+    --input: 222 36% 22%;
+    --ring: 220 100% 66%;
+    --chart-1: 197 37% 24%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 43 74% 66%;
+    --chart-4: 27 87% 67%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+body {
+  height: 100vh;
+  position: relative;
+}
+
+.auth-page {
+  height: 100vh;
+  background: url("../public/glass-bg.png") no-repeat center center fixed;
+}
+
+.auth-page form {
+  position: relative;
+  box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.auth-page img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.12;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-layout::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Utilities */
+.u-triangle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 8px solid #fed036;
+  transform: translateY(-50%);
+}
