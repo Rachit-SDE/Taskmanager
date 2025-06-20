@@ -8,14 +8,14 @@ import errorHandler from "./src/helpers/errorhandler.js";
 
 dotenv.config();
 
-const port = "taskmanagerbackend-25jiau85t-rachit-gours-projects.vercel.app" || 8000;
+const port = 8000;
 
 const app = express();
 
 // middleware
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://taskmanager-rho-wheat.vercel.app"],
+    origin: ["http://localhost:3000", "https://taskmanager-rho-wheat.vercel.app/"],
     credentials: true,
   })
 );
